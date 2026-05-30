@@ -4,7 +4,7 @@ function Card({ creator }) {
   const { id, name, url, description, imageURL } = creator
 
   return (
-    <article className="card">
+    <article>
       {imageURL && (
         <img
           className="card-image"
@@ -13,15 +13,17 @@ function Card({ creator }) {
         />
       )}
 
-      <div className="card-content">
-        <h2 className="card-title">{name}</h2>
-        <p className="card-description">{description}</p>
+      <div>
+        <h2>{name}</h2>
+        <p>{description}</p>
 
         <div className="card-actions">
-          <a href={url} target="_blank" rel="noreferrer">
+          <a href={url} target="_blank" rel="noreferrer" role="button">
             Visit Channel
           </a>
-          <Link to={`/${id}`}>View Details</Link>
+          <Link className="secondary" to={`/${id}`} role="button">
+            View Details
+          </Link>
           <Link to={`/edit/${id}`}>Edit</Link>
         </div>
       </div>

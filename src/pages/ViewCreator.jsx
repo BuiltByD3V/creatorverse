@@ -33,14 +33,14 @@ function ViewCreator() {
   }, [id])
 
   return (
-    <main className="page">
+    <main className="container">
       {isLoading && <p>Loading creator...</p>}
 
       {!isLoading && errorMessage && (
         <section className="empty-state">
           <h1>Creator Not Found</h1>
           <p>{errorMessage}</p>
-          <Link className="button" to="/">
+          <Link to="/" role="button">
             Back Home
           </Link>
         </section>
@@ -54,7 +54,7 @@ function ViewCreator() {
               <p>{creator.description}</p>
             </div>
             <div className="form-actions">
-              <Link className="button" to={`/edit/${creator.id}`}>
+              <Link to={`/edit/${creator.id}`} role="button">
                 Edit Creator
               </Link>
               <Link to="/">Back Home</Link>
@@ -70,7 +70,7 @@ function ViewCreator() {
               />
             )}
 
-            <a href={creator.url} target="_blank" rel="noreferrer">
+            <a href={creator.url} target="_blank" rel="noreferrer" role="button">
               Visit Creator
             </a>
           </section>

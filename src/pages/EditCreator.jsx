@@ -102,13 +102,13 @@ function EditCreator() {
   }
 
   return (
-    <main className="page">
+    <main className="container">
       <header className="page-header">
         <div>
           <h1>Edit Creator</h1>
           <p>Update this creator&apos;s details or remove them.</p>
         </div>
-        <Link className="button secondary-button" to={`/${id}`}>
+        <Link className="secondary" to={`/${id}`} role="button">
           Back to Details
         </Link>
       </header>
@@ -119,14 +119,14 @@ function EditCreator() {
         <section className="empty-state">
           <h2>Creator Not Found</h2>
           <p>{errorMessage}</p>
-          <Link className="button" to="/">
+          <Link to="/" role="button">
             Back Home
           </Link>
         </section>
       )}
 
       {!isLoading && creator.name && (
-        <form className="creator-form" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
 
           <label htmlFor="name">

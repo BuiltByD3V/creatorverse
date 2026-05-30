@@ -46,18 +46,18 @@ function AddCreator() {
   }
 
   return (
-    <main className="page">
+    <main className="container">
       <header className="page-header">
         <div>
           <h1>Add Creator</h1>
           <p>Add a creator to your Creatorverse collection.</p>
         </div>
-        <Link className="button secondary-button" to="/">
+        <Link className="secondary" to="/" role="button">
           Back Home
         </Link>
       </header>
 
-      <form className="creator-form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
 
         <label htmlFor="name">

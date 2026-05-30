@@ -38,13 +38,13 @@ function ShowCreators() {
   }, [])
 
   return (
-    <main className="page">
+    <main className="container">
       <header className="page-header">
         <div>
           <h1>Creatorverse</h1>
           <p>Explore your favorite content creators.</p>
         </div>
-        <Link className="button" to="/new">
+        <Link to="/new" role="button">
           Add Creator
         </Link>
       </header>
